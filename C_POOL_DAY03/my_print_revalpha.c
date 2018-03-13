@@ -5,7 +5,7 @@ void my_putchar(char c)
 	write(1,&c,1);
 }
 
-void my_print_revalpha(char c)
+int my_print_revalpha(char c)
 {
 	while(c>='a')
 	{
@@ -14,10 +14,10 @@ void my_print_revalpha(char c)
 	}
 }
 
-void main()
+/*void main()
 {
 
 	my_print_revalpha('z');
 	write(1,"\n",1);
 
-}
+}*/

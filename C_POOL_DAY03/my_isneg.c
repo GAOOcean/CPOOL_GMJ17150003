@@ -19,11 +19,5 @@ int my_isneg(int n)
 	}
 }
 
-void main()
-{
-	my_isneg(9);
-	my_isneg(-6);
-	my_isneg(0);
-}
 
 

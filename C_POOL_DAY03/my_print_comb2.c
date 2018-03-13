@@ -1,12 +1,12 @@
 #include<unistd.h>
 
-void my_putchar(char c)
+int my_putchar(char c)
 {
 	write(1,&c,1);
 }
 
 
-void main()
+int my_print_comb2(void)
 {
 	int i,j,m,n;
 	

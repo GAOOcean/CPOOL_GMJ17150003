@@ -1,13 +1,14 @@
 //#include<stdio.h>
 #include<unistd.h>
+#include"my_print_comb.h"
 
-void my_putchar(char c)
+int my_putchar(char c)
 {
 	write(1,&c,1);
 }
 
 
-void main()
+int my_print_comb(void)
 {
 	int i,j,k;
 	
@@ -46,5 +47,8 @@ void main()
 		}
 	}
 }
+
+
+
 
 

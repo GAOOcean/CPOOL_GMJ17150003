@@ -1,12 +1,12 @@
 #include<unistd.h>
 
-void my_putchar(char c)
+int my_putchar(char c)
 {
 	write(1,&c,1);
 }
-
-void my_print_digits(int c)
+int my_print_digits(void)
 {
+	char c='0';
 	while(c<='9')
 	{
 		my_putchar(c);
@@ -14,9 +14,3 @@ void my_print_digits(int c)
 	}
 }
 
-
-void main()
-{
-	my_print_digits('0');
-	write(1,"\n",1);
-}

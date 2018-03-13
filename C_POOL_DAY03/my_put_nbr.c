@@ -1,13 +1,13 @@
 #include<unistd.h>
 #include<stdio.h>
 
-void my_putchar(char c)
+int my_putchar(char c)
 {
 	write(1,&c,1);
 }
 
 
-void my_put_nbr(int n)
+int my_put_nbr(int n)
 {
 	if(n>=0)
 	{
@@ -32,12 +32,3 @@ void my_put_nbr(int n)
 
 }
 
-int main()
-{
-	my_put_nbr(8274);
-	my_putchar('\n');
-	my_put_nbr(0);
-	my_putchar('\n');
-	my_put_nbr(-894);
-	my_putchar('\n');
-}
