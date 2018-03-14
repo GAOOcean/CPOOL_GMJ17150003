@@ -12,11 +12,13 @@ int my_isneg(int n)
 		my_putchar('N');
 		write(1,"\n",1);
 	}
-	else
+	else(n>=0)
 	{
 		my_putchar('P');
 		write(1,"\n",1);
 	}
+	else
+		return 0;
 }
 
 
