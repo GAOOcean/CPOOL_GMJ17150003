@@ -1,25 +1,35 @@
-#include<stdio.h>
-//#include<string.h>
 
-char *my_evil_str(char *str)
-{
-	char *start = str;
-	char *end = str + my_strlen(str);
-	char temp;
-;
-	while(start<end)
-	{
-		temp = *start;
-		*start++ = *end;	
-		*end-- = temp;
-	}
-	return end;
-}
+//#include<stdio.h>
 
-/*int main()
-{
-	char c[] = "abcde";
-	char *s = c;
-	printf("%s\n",s);
-	printf("%s\n",my_evil_str(s));
+/*int my_strlen(char *str)    
+{  
+	if(*str == '\0') 
+		return 0;   
+	else  
+	return 1+ my_strlen(str+1); 
 }*/
+char *my_evil_str(char *str)
+{  
+	int len = my_strlen(str);  
+	if(len <= 1)   
+		return 0;  
+	else  
+	{  
+		char temp = str[0];     
+        	str[0] = str[len-1];  
+        	str[len-1] = '\0';   
+        	my_evil_str(str+1); 
+        	str[len-1] = temp;  
+	}  
+}    
+  
+/*int main()  
+{  
+	char c[] = "abcdefghijklmno";
+	my_evil_str(c);  
+	printf("%s ",c);  
+	printf("\n");  
+	return 0;  
+}*/
+
+
