@@ -9,6 +9,7 @@
 	}
 	return len;
 }*/
+int my_strlen(const char *s);
 
 char *my_evil_str(char *str)
 {

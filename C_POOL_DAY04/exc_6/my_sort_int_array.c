@@ -18,6 +18,8 @@ void printArray(int array[], const int size)
 	*p1 = *p2;
 	*p2 = temp;
 }*/
+void swap(int *p1, int *p2);
+
 
 void my_sort_int_arry(int *array,int size) 
 {
